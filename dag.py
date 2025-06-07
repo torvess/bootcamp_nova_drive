@@ -17,9 +17,9 @@ default_args = {
     dag_id='postgres_to_snowflake',
     default_args=default_args,
     description='Load data incrementally from Postgres to Snowflake',
-    schedule_interval=timedelta(days=1),
+    schedule=timedelta(days=1),
     catchup=False
-) 
+)
 def postgres_to_snowflake_etl():
     table_names = ['veiculos', 'estados', 'cidades', 'concessionarias', 'vendedores', 'clientes', 'vendas']
  
